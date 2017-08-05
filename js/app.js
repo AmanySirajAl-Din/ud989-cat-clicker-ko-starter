@@ -4,11 +4,11 @@
 
 // pass data argument to pass the new cat's data
 var newCat = function (data) {
-    this.clickCount = ko.observable(0);
-    this.name = ko.observable('Tabby');
-    this.imgSrc = ko.observable('img/434164568_fea0ad4013_z.jpg');
-    this.imgAttr = ko.observable('');
-    this.nicknames = ['Tabtab', 'T-Bone', 'Mr.T'];
+    this.clickCount = ko.observable(data.clickCount);
+    this.name = data.name;
+    this.imgSrc = ko.observable(data.imgSrc);
+    this.imgAttr = ko.observable(data.imgAttr);
+    this.nicknames = ko.observableArray(data.nicknames);
 
 
     this.catLevel = ko.computed(function () {
