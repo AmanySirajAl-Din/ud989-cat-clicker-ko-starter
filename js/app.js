@@ -59,8 +59,7 @@ var newCat = function (data) {
 };
 
 var ViewModel = function () {
-    // var self = this;
-    
+    var self = this;
     
     
     // add cat using newCat
@@ -75,14 +74,14 @@ var ViewModel = function () {
     // use currentCat() to call its objects
 
     this.incrementCounter = function () {
-        this.clickCount(this.clickCount() + 1);
+        // this.clickCount(this.clickCount() + 1);
         // this. here represent the binding context
         // so to solve this in other way 
         // at the begining of the View model
         // var self = this;
-        // then we can use this.currentCat().clickCount
+        // then we can use self.currentCat().clickCount
 
-        // this.currentCat().clickCount(this.currentCat().clickCount() + 1);
+        self.currentCat().clickCount(self.currentCat().clickCount() + 1);
 
         // when ever you want to access the outer this
         // (in this case the ViewModel)
