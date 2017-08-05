@@ -24,10 +24,19 @@ var ViewModel = function () {
     // Add cat levels 
     // using computed observable
     this.catLevel = ko.computed(function (){
-        if(this.clickCount < 10){
+        var numOfClicks = this.clickCount();
+        if(numOfClicks < 10){
             return "New Born";
-        }else if(this.clickCount >= 10){
+        }else if(numOfClicks < 50){
             return "Infant";
+        }else if(numOfClicks < 100){
+            return "Child";
+        }else if(numOfClicks < 200){
+            return "Teen";
+        }else if(numOfClicks < 500){
+            return "Adult";
+        }else {
+            return "Ninja";
         }
     }, this);
     
