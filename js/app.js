@@ -3,13 +3,13 @@
 // without repeating the same code
 
 // pass data argument to pass the new cat's data
-var newCat = function(data){
+var newCat = function (data) {
     this.clickCount = ko.observable(0);
     this.name = ko.observable('Tabby');
     this.imgSrc = ko.observable('img/434164568_fea0ad4013_z.jpg');
     this.imgAttr = ko.observable('');
     this.nicknames = ['Tabtab', 'T-Bone', 'Mr.T'];
-    
+
 
     this.catLevel = ko.computed(function () {
         var numOfClicks = this.clickCount();
@@ -31,12 +31,18 @@ var newCat = function(data){
 
 var ViewModel = function () {
     // var self = this;
-    
+
     // add cat using newCat
-    this.currentCat = ko.observable(new newCat());
+    this.currentCat = ko.observable(new newCat({
+        this.clickCount = ko.observable(0);
+        this.name = ko.observable('Tabby');
+        this.imgSrc = ko.observable('img/434164568_fea0ad4013_z.jpg');
+        this.imgAttr = ko.observable('');
+        this.nicknames = ['Tabtab', 'T-Bone', 'Mr.T'];
+    }));
     // then update my data-bind according to it
     // use currentCat() to call its objects
-    
+
     this.incrementCounter = function () {
         this.clickCount(this.clickCount() + 1);
         // this. here represent the binding context
@@ -44,9 +50,9 @@ var ViewModel = function () {
         // at the begining of the View model
         // var self = this;
         // then we can use this.currentCat().clickCount
-        
+
         // this.currentCat().clickCount(this.currentCat().clickCount() + 1);
-        
+
         // when ever you want to access the outer this
         // (in this case the ViewModel)
         // you can store it somewhere (here in self)
