@@ -1,3 +1,32 @@
+// intialize my cats array of objects
+var catsObjArray = [
+    {
+        numOfClicks: 0,
+        name: "Bisho",
+        imgSrc: "img/Bisho.jpg"
+        },
+    {
+        numOfClicks: 0,
+        name: "Boby",
+        imgSrc: "img/Boby.jpg"
+        },
+    {
+        numOfClicks: 0,
+        name: "Bosy",
+        imgSrc: "img/Bosy.jpg"
+        },
+    {
+        numOfClicks: 0,
+        name: "Mared",
+        imgSrc: "img/Mared.jpg"
+        },
+    {
+        numOfClicks: 0,
+        name: "Misho",
+        imgSrc: "img/Misho.jpg"
+        }
+    ];
+
 // move all my data to newCat Object
 // to be able to create a new cat 
 // without repeating the same code
@@ -31,7 +60,9 @@ var newCat = function (data) {
 
 var ViewModel = function () {
     // var self = this;
-
+    
+    
+    
     // add cat using newCat
     this.currentCat = ko.observable(new newCat({
         this.clickCount = ko.observable(0);
