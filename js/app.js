@@ -2,28 +2,33 @@
 var catsObjArray = [
     {
         numOfClicks: 0,
-        name: "Bisho",
-        imgSrc: "img/Bisho.jpg"
+        name: "Tabby",
+        imgSrc: "img/434164568_fea0ad4013_z.jpg",
+        nicknames: ['Tabtab', 'T-Bone', 'Mr.T']
         },
     {
         numOfClicks: 0,
-        name: "Boby",
-        imgSrc: "img/Boby.jpg"
+        name: "Tiger",
+        imgSrc: "img/4154543904_6e2428c421_z.jpg",
+        nicknames: ['Tigger']
         },
     {
         numOfClicks: 0,
-        name: "Bosy",
-        imgSrc: "img/Bosy.jpg"
+        name: "Scaredy",
+        imgSrc: "img/22252709_010df3379e_z.jpg",
+        nicknames: ['Casper']
         },
     {
         numOfClicks: 0,
-        name: "Mared",
-        imgSrc: "img/Mared.jpg"
+        name: "Shadow",
+        imgSrc: "img/1413379559_412a540d29_z.jpg",
+        nicknames: ['Shooby']
         },
     {
         numOfClicks: 0,
-        name: "Misho",
-        imgSrc: "img/Misho.jpg"
+        name: "Sleepy",
+        imgSrc: "img/9648464288_2516b35537_z.jpg",
+        nicknames: ['Zzzzzzz']
         }
     ];
 
