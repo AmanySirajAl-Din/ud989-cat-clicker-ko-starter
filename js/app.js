@@ -1,7 +1,9 @@
 // move all my data to newCat Object
 // to be able to create a new cat 
 // without repeating the same code
-var newCat = function(){
+
+// pass data argument to pass the new cat's data
+var newCat = function(data){
     this.clickCount = ko.observable(0);
     this.name = ko.observable('Tabby');
     this.imgSrc = ko.observable('img/434164568_fea0ad4013_z.jpg');
@@ -53,5 +55,3 @@ var ViewModel = function () {
 }
 
 ko.applyBindings(new ViewModel);
-
-// Now we are just making same cat each time
