@@ -10,7 +10,11 @@
 
         <h2 data-bind="text: name"></h2>
         <div data-bind="text: clickCount"></div>
-        <img src="" alt="cute cat">
+        
+        <!-- to increment the counter to run when click on cat img -->
+        <!-- use data-bind="click: incrementCounter" -->
+       
+        <img src="" alt="cute cat" data-bind="click: incrementCounter">
 
     </div>
     <script src="js/lib/knockout-3.2.0.js"></script>
