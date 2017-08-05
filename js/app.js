@@ -28,6 +28,7 @@ var newCat = function(){
 };
 
 var ViewModel = function () {
+    // var self = this;
     
     // add cat using newCat
     this.currentCat = ko.observable(new newCat());
@@ -36,6 +37,13 @@ var ViewModel = function () {
     
     this.incrementCounter = function () {
         this.clickCount(this.clickCount() + 1);
+        // this. here represent the binding context
+        // so to solve this in other way 
+        // at the begining of the View model
+        // var self = this;
+        // then we can use this.currentCat().clickCount
+        
+        // this.currentCat().clickCount(this.currentCat().clickCount() + 1);
     };
 }
 
