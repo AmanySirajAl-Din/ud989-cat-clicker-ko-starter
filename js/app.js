@@ -78,6 +78,10 @@ var ViewModel = function () {
     this.currentCat = ko.observable(this.catList()[0]);
     // then update my data-bind according to it
     // use currentCat() to call its objects
+    
+    this.changeCat = function (clickedCat) {
+        self.currentCat(clickedCat);
+    };
 
     this.incrementCounter = function () {
         // this.clickCount(this.clickCount() + 1);
