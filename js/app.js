@@ -1,4 +1,7 @@
-var ViewModel = function () {
+// move all my data to newCat Object
+// to be able to create a new cat 
+// without repeating the same code
+var newCat = function(){
     // add my model data here
     this.clickCount = ko.observable(0);
     this.name = ko.observable('Tabby');
@@ -28,7 +31,10 @@ var ViewModel = function () {
             return "Ninja";
         }
     }, this);
+};
 
+var ViewModel = function () {
+    
     // then we need the function to increase my counter
     this.incrementCounter = function () {
         this.clickCount(this.clickCount() + 1);
