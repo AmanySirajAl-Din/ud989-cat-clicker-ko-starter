@@ -9,8 +9,9 @@
     <div id="cat">
 
         <h2 class="cat-name" data-bind="text: name"></h2>
-        <div class="click-count-div" data-bind="text: clickCount"></div>
         <h3 class="cat-level" data-bind="text: catLevel"></h3>
+        <!-- add cat level using computed observable-->
+        <div class="click-count-div" data-bind="text: clickCount"></div>
         
         <!-- to increment the counter to run when click on cat img -->
         <!-- use click: incrementCounter -->
@@ -19,6 +20,12 @@
         <img class="cat-img" src="" alt="cute cat" data-bind="click: incrementCounter,
                                               attr:{src: imgSrc}">
         
+        <!-- add cat nicknames -->
+        <!-- using control flow structure (foreach) -->
+        <h2>Nicnames:</h2>
+        <ul class="nicknamesList" data-bind="foreach: nicknames">
+            <li data-bind="text: $data"></li>
+        </ul>
         <!-- Now, the cat clicker is working thanks to the knockot.js bindings-->
 
     </div>

@@ -4,6 +4,8 @@ var ViewModel = function () {
     this.name = ko.observable('Tabby');
     this.imgSrc = ko.observable('img/434164568_fea0ad4013_z.jpg');
     this.imgAttr = ko.observable('');
+     // Add Nicknames for the cat
+    this.nicknames = ['Tabtab', 'T-Bone', 'Mr.T'];
     // the peices are functionally separate
     // even though the model is defined inside the ViewModel
     // the functionality is separate
@@ -18,17 +20,18 @@ var ViewModel = function () {
     // we don't need the other get snd set functions
     // because KO will handle the view to model
     // and model to view sync for us
-    console.log(this.clickCount());
+
     // Add cat levels 
     // using computed observable
     this.catLevel = ko.computed(function (){
-        //console.dir(this.clickCount);
-        if(this.clickCount() < 10){
+        if(this.clickCount < 10){
             return "New Born";
-        }else if(this.clickCount() >= 10){
+        }else if(this.clickCount >= 10){
             return "Infant";
         }
     }, this);
+    
+   
 
 
 }
