@@ -7,7 +7,9 @@
 </head>
 
 <body>
-    <ul id="cat-list"></ul>
+    <ul id="cat-list" data-bind="foreach: catList">
+        <li data-bind="text: name"></li>
+    </ul>
     <div id="cat" data-bind="with: currentCat">
 
         <!-- update my data-bind according to currentCat observable -->
