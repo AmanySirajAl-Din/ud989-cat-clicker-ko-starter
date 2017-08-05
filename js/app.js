@@ -44,6 +44,11 @@ var ViewModel = function () {
         // then we can use this.currentCat().clickCount
         
         // this.currentCat().clickCount(this.currentCat().clickCount() + 1);
+        
+        // when ever you want to access the outer this
+        // (in this case the ViewModel)
+        // you can store it somewhere (here in self)
+        // then use it inside the functions that nested :)
     };
 }
 
