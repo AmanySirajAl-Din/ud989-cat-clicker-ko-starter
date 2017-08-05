@@ -75,13 +75,7 @@ var ViewModel = function () {
     });
     
     // add cat using newCat
-    this.currentCat = ko.observable(new newCat({
-        this.clickCount = ko.observable(0);
-        this.name = ko.observable('Tabby');
-        this.imgSrc = ko.observable('img/434164568_fea0ad4013_z.jpg');
-        this.imgAttr = ko.observable('');
-        this.nicknames = ['Tabtab', 'T-Bone', 'Mr.T'];
-    }));
+    this.currentCat = ko.observable(this.catList()[0]);
     // then update my data-bind according to it
     // use currentCat() to call its objects
 
