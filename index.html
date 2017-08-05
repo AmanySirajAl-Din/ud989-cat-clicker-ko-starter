@@ -7,16 +7,17 @@
 <body>
     <ul id="cat-list"></ul>
     <div id="cat">
-
-        <h2 class="cat-name" data-bind="text: name"></h2>
-        <h3 class="cat-level" data-bind="text: catLevel"></h3>
-        <div class="click-count-div" data-bind="text: clickCount"></div>
+        
+        <!-- update my data-bind according to currentCat observable -->
+        <h2 class="cat-name" data-bind="text: currentCat().name"></h2>
+        <h3 class="cat-level" data-bind="text: currentCat().catLevel"></h3>
+        <div class="click-count-div" data-bind="text: currentCat().clickCount"></div>
         
         <img class="cat-img" src="" alt="cute cat" data-bind="click: incrementCounter,
-                                              attr:{src: imgSrc}">
+                                              attr:{src: currentCat().imgSrc}">
         
         <h2>Nicnames:</h2>
-        <ul class="nicknamesList" data-bind="foreach: nicknames">
+        <ul class="nicknamesList" data-bind="foreach: currentCat().nicknames">
             <li data-bind="text: $data"></li>
         </ul>
         
