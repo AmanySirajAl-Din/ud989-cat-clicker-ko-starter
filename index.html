@@ -8,14 +8,14 @@
     <ul id="cat-list"></ul>
     <div id="cat">
 
-        <h2 data-bind="text: name"></h2>
-        <div data-bind="text: clickCount"></div>
+        <h2 class="cat-name" data-bind="text: name"></h2>
+        <div class="click-count-div" data-bind="text: clickCount"></div>
         
         <!-- to increment the counter to run when click on cat img -->
         <!-- use click: incrementCounter -->
         <!-- for the source attr of the cat img to be updated as the source changes -->
         <!-- use attr:{src: imgSrc} -->
-        <img src="" alt="cute cat" data-bind="click: incrementCounter,
+        <img class="cat-img" src="" alt="cute cat" data-bind="click: incrementCounter,
                                               attr:{src: imgSrc}">
         
         <!-- Now, the cat clicker is working thanks to the knockot.js bindings-->
