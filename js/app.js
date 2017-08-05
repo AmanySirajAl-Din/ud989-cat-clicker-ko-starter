@@ -18,6 +18,17 @@ var ViewModel = function () {
     // we don't need the other get snd set functions
     // because KO will handle the view to model
     // and model to view sync for us
+    console.log(this.clickCount());
+    // Add cat levels 
+    // using computed observable
+    this.catLevel = ko.computed(function (){
+        //console.dir(this.clickCount);
+        if(this.clickCount() < 10){
+            return "New Born";
+        }else if(this.clickCount() >= 10){
+            return "Infant";
+        }
+    }, this);
 
 
 }
