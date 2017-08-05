@@ -66,6 +66,9 @@ var newCat = function (data) {
 var ViewModel = function () {
     var self = this;
     
+    // make a catList observableArray
+    this.catList = ko.observableArray([]);
+    
     
     // add cat using newCat
     this.currentCat = ko.observable(new newCat({
