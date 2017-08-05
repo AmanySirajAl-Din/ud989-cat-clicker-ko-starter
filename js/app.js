@@ -69,6 +69,10 @@ var ViewModel = function () {
     // make a catList observableArray
     this.catList = ko.observableArray([]);
     
+    // loop over my catsObjArray and put its data in catList
+    catsObjArray.forEach(function(catItem){
+        self.catList.push(new newCat(catItem));
+    });
     
     // add cat using newCat
     this.currentCat = ko.observable(new newCat({
