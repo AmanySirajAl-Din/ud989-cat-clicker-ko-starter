@@ -53,3 +53,5 @@ var ViewModel = function () {
 }
 
 ko.applyBindings(new ViewModel);
+
+// Now we are just making same cat each time
